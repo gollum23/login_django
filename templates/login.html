@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block login_content %}
+      <h1>Login</h1>
+      <form action="" method="post">
+          {% csrf_token %}
+          <input type="hidden" name="action" value="login">
+
+          <input type="text" name="username">
+          <input type="text" name="password">
+
+          <button type="submit" name="button">Login</button>
+
+      </form>
+      <h1>SignUp</h1>
+      <form action="index.html" method="post">
+        {% csrf_token %}
+        <input type="hidden" name="action" value="signup">
+
+        <input type="text" name="username" value="">
+        <input type="text" name="password" value="">
+
+        <button type="submit" name="button">Signup</button>
+      </form>
+{% endblock %}
